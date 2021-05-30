@@ -195,9 +195,7 @@ get_function(Req, #{services := Services} = _Options, Stream) ->
             handler => Handler,
             handler_state => HandlerState,
             rpc => Rpc}.
-
-binary_to_existing_atom(B) ->
-    list_to_existing_atom(binary_to_list(B)).
+            
 
 read_frames(#{cowboy_req := Req,
               encoding := Encoding} = Stream) ->
